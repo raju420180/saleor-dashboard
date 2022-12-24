@@ -11,12 +11,12 @@ pipeline {
         }
         stage('docker image build') {
             steps {
-                sh 'docker image build -t rajugundala/workshop1234/saleor-dashboar:DEV .'
+                sh 'docker image build -t rajugundala/workshop1234:DEV .'
             }
         }
         stage('push image to registry') {
             steps {
-                sh 'docker image push rajugundala/workshop1234/saleor-dashboar:DEV'
+                sh 'docker image push rajugundala/workshop1234:DEV'
             }
         }
     }
